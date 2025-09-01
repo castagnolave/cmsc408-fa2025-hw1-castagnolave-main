@@ -1,0 +1,190 @@
+---
+title: Homework 1 - Open Source Tools
+author:
+    - name: Victoria Castagnola
+      email: castagnola.victoria@gmail.com or castagnolave@vcu.edu
+date: 8/31/2025
+
+## Useful references:
+# - Basic Markdown: https://quarto.org/docs/authoring/markdown-basics.html
+# - Quarto figures: https://quarto.org/docs/authoring/figures.html
+# - HTML document basics: https://quarto.org/docs/output-formats/html-basics.html
+# - Quarto guide: https://quarto.org/docs/guide/
+# - VS Code and Quarto: https://quarto.org/docs/tools/vscode.html
+#   (RTFM and GET THE EXTENSION!!!!)
+---
+
+[Link to project repository](https://github.com/cmsc-vcu/cmsc408-fa2025-hw1-castagnolave)
+
+(Add an intro paragraph here.  What is the purpose of this report?)
+
+# Open Source Data Engineering Tools
+
+Author Alireza Sadeghi offers a nice overview of the [2025 data engineering landscape](https://www.pracdata.io/p/open-source-data-engineering-landscape-2025) in the on-line web site [Practical Data Engineering Substack](https://practicaldataengineering.substack.com/).
+
+![](assets/tools-2025.webp)
+
+# Major Categories
+
+Mr. Sadeghi proposals nine major tools categories.
+
+## Storage Systems
+
+Storage systems are foundational components in data engineering that handle
+the storage and retrieval of data. These systems can include traditional
+databases, distributed storage solutions, and modern cloud-based storage 
+options. They provide scalable, reliable, and secure environments to store 
+structured, semi-structured, and unstructured data, ensuring data is
+accessible for processing, analysis, and other operations.
+
+## Data Lake Platform
+
+Data Lake platforms are designed to store vast amounts of raw data in its native format until it is needed. Unlike traditional databases, data lakes can store structured, semi-structured, and unstructured data, providing a flexible and scalable storage solution. These platforms support the integration of multiple data sources, making it easier to perform big data analytics and machine learning on large datasets.
+
+## Data Integration
+
+Data Integration platforms have been popularized because many companies do not need to access big data as much as they may have previously estimated, thus single-node solutions are often enough for their needs. These platforms enable movement and transformation of data between sources, so it can stay consistent and accurate. They support Extract, Transform, Load (ETL) processes, API integrations, and real-time data synchronization, among others. There are many different options, making them great for modern data flow needs.
+
+## Data Processing and Computation
+
+Data processing and computation, also called data ingestion, is the process of 
+turning raw data into a format that's easy to work with for analysis and decision-making. 
+This includes tasks like cleaning up messy data, combining it, summarizing it, and adding relevant details to make it more meaningful. Modern tools often handle big datasets by 
+breaking the work down into pieces and processing them from there. These tools are 
+key for tasks like batch processing, real-time data streams, and digging into data to 
+find useful insights. This way, companies and people can use the data.
+
+## Workflow and DataOps
+
+Workflow and DataOps encompass the whole process, from data collection to processing, as well as any human contribution points. These tools help move data from one place to another while making sure it's correct and ready to use. They also make it easier for teams to work together by showing how data flows, keeping track of changes, and making sure processes can be repeated. DataOps applies ideas from agile and DevOps to improve how data is handled and shared.
+
+## Data Infrastructure and Monitoring
+
+Data infrastructure is the bones of it all. It includes all of the physical 
+and virtual components that support the storage, processing, and movement of data. 
+This category covers servers, networking equipment, cloud services, and 
+databases that form the backbone of any data  system. Another example of infrastructure would be the highways and other roads of America. Proper data 
+infrastructure ensures that data is accessible, secure, and scalable, enabling 
+organizations to handle increasing amounts of data efficiently. Monitoring tools 
+are also a very importat part of data infrastructure because they help track system 
+performance, identify bottlenecks, and ensure reliability. Without a solid data 
+infrastructure, even the most advanced data engineering tools would struggle to 
+function. 
+
+## ML/AI Platform
+
+ML platforms offer tools for building, training, and deploying machine learning models, covering tasks like data preparation, model training, parameter optimization, and deployment workflows. These platforms often use cloud-based solutions for scalability and support teamwork through features like version control and experiment tracking. Open-source examples include PyTorch and TensorFlow, enabling organizations to make informed, data-driven decisions.
+
+## Metadata Management
+
+Metadata management is the process of organizing metadata to ensure that it is accessible, accurate, and compliant with applicable regulations. Metadata, often referred to as "data about data," provides context and meaning to raw data, making it easier to understand, go through, and utilize. Effective metadata management is crucial in larger databases, where the sheer volume of data can make it challenging to maintain organization and compliance. Tools in this category help catalog, govern, and track metadata, enabling better data discovery, lineage, and quality control.
+
+## Analytics and Visualization
+
+Analytics and visualization tools help make sense of data and share insights. Analytics tools analyze data to find patterns, trends, and useful information. Visualization tools turn this data into charts, graphs, and dashboards that are easy to understand.
+
+Modern platforms often combine analytics and visualization, making it easier to analyze and present data in one place. These tools are used in many areas, like business and research, to find and explain important information. Examples of open-source tools include Apache Superset, Metabase, and Plotly.
+
+# Digging into the details
+
+In the following sections I identify three subcategories of data engineering tools of greatest interest to me.
+
+## Relational OLTP DBMS
+
+This section is provided as an example.  DELETE this ENTIRE *Relational OLTP DBMS block!*, all the way
+down to the *Your interest category 1*.
+You MAY NOT submit *relational OLTP DBMS* as part of your project 1!
+
+**Relational Online Transaction Processing (OLTP) Database Management Systems (DBMS)** are designed to manage and execute a large number of short, transactional operations that involve the insertion, update, and deletion of data in a relational database. These systems are optimized for environments where data integrity, consistency, and speed are critical due to the high volume of concurrent transactions.
+
+### Unique Characteristics of Relational OLTP DBMS:
+
+1. **Structured Data Storage:**
+   - Data is stored in a structured format using tables that define specific schemas, with rows representing records and columns representing attributes of the data.
+   - The use of primary and foreign keys enforces relationships between different tables, maintaining data integrity across the database.
+
+2. **ACID Compliance:**
+   - OLTP systems are designed to be ACID-compliant (Atomicity, Consistency, Isolation, Durability). This ensures that all transactions are processed reliably, even in the event of a system failure.
+   - Atomicity guarantees that all parts of a transaction are completed; otherwise, the transaction is aborted.
+   - Consistency ensures that each transaction brings the database from one valid state to another.
+   - Isolation keeps transactions separated until they are completed, preventing concurrency issues.
+   - Durability ensures that once a transaction is committed, it is permanently recorded in the database, even in the case of a power failure.
+
+3. **Concurrency Control:**
+   - OLTP systems employ sophisticated concurrency control mechanisms, such as locking and transaction isolation levels, to manage simultaneous data access by multiple users or processes.
+   - These mechanisms prevent conflicts and ensure that transactions are executed in a consistent and reliable manner, even under heavy load.
+
+4. **High Availability and Reliability:**
+   - OLTP databases are designed for environments that require high availability and reliability. They often include features such as replication, clustering, and failover to ensure continuous operation even during hardware or network failures.
+   - Backup and recovery mechanisms are also integral to these systems, ensuring that data can be restored to a consistent state in the event of a failure.
+
+5. **Scalability:**
+   - While traditionally OLTP systems were scaled vertically by adding more resources to a single server, modern OLTP DBMS solutions support horizontal scaling, enabling distributed transactions across multiple servers or nodes.
+   - Distributed OLTP systems can handle a larger number of transactions by partitioning data and processing load across multiple instances.
+
+### Usage of Relational OLTP DBMS:
+
+1. **Business Applications:**
+   
+   OLTP systems are widely used in business applications that require the processing of large volumes of simple, repetitive transactions, such as order processing, inventory management, financial transactions, and customer relationship management (CRM) systems.
+   
+   Examples include e-commerce platforms, banking systems, and ERP (Enterprise Resource Planning) software.
+
+2. **Real-Time Transaction Processing:**
+
+   OLTP systems are ideal for applications requiring real-time data entry, updates, and querying, where the accuracy and speed of transactions directly impact business operations.
+
+   They are often used in industries such as finance, telecommunications, retail, and healthcare, where real-time data processing is critical.
+
+3. **Data Integrity and Consistency:**
+   
+   OLTP databases are crucial in environments where data integrity and consistency are non-negotiable. For example, in financial systems, it is vital that all transactions are recorded accurately and that balances reflect all processed transactions immediately.
+
+4. **User-Driven Querying:**
+   
+   OLTP systems support user-driven querying, allowing end-users to retrieve and interact with data through applications in real-time. These queries are typically simple and involve accessing specific records or performing updates on existing data.
+
+### Examples of Open-Source Relational OLTP DBMS:
+
+**PostgreSQL:** A powerful, open-source relational database system that is known for its robustness, extensibility, and support for complex queries and transactions.
+
+**MySQL:** A widely-used open-source relational database known for its ease of use, reliability, and performance, particularly in web-based applications.
+
+**MariaDB:** A fork of MySQL, MariaDB is designed to be highly compatible with MySQL while offering additional features and performance improvements.
+
+**SQLite:** A lightweight, embedded SQL database engine that is self-contained and requires minimal setup, commonly used in mobile apps and small to medium-sized applications.
+
+These relational OLTP DBMS tools are foundational in many organizations, ensuring that transactional data is handled efficiently and reliably, forming the backbone of countless business operations worldwide.
+
+## (Your interest category 1)
+
+## (Your interest category 2)
+
+## (Your interest category 3)
+
+
+# Reflection
+
+Convert these questions into brief paragraph responses (two or three sentence).
+
+* what did you like about this project?
+
+* what did you find hardest about this project?
+
+* what did you find most surprising about this assignment?
+
+* how would you approach this project differently next time?
+
+
+# README
+
+A quality README is an important part of EVERY project. Using the Quarto *include* command we're including a copy of your README in the project report so that a human can evaluate it.
+
+Make sure that you edit the README so that it's explanatory!  Note that you don't need a readme within the *reports* folder for this assignment. We're only
+focused on the root *README.md*.
+
+[Here is some info](https://www.freecodecamp.org/news/how-to-write-a-good-readme-file/) on how to write a good README!
+
+::: {style="background:lightgray; margin-left:20px; border-top: 3px solid black; border-bottom: 3px solid black; padding-left:20px; padding-right:20px"}
+{{< include ../README.md >}}
+:::

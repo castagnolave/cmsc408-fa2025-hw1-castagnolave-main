@@ -1,0 +1,43 @@
+# Quarto output directories
+_output/
+_site/
+*/_output/
+*/_site/
+
+# Quarto cache
+.quarto/
+
+# R/RStudio specific files (if using R with Quarto)
+.Rhistory
+.RData
+.Rproj.user/
+.Rproj
+.Rbuildignore
+
+# Python specific files (if using Python with Quarto)
+__pycache__/
+*.py[cod]
+*.ipynb_checkpoints/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# VSCode specific files
+.vscode/
+*.code-workspace
+
+# MacOS specific files
+.DS_Store
+
+# Temporary files
+*.log
+*.tmp
+*.swp
+*.swo
+*~
+
+# System-specific files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
