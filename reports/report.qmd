@@ -89,8 +89,7 @@ Modern platforms often combine analytics and visualization, making it easier to 
 
 In the following sections I identify three subcategories of data engineering tools of greatest interest to me.
 
-## Relational OLTP DBMS
-
+## 
 This section is provided as an example.  DELETE this ENTIRE *Relational OLTP DBMS block!*, all the way
 down to the *Your interest category 1*.
 You MAY NOT submit *relational OLTP DBMS* as part of your project 1!
@@ -156,7 +155,6 @@ You MAY NOT submit *relational OLTP DBMS* as part of your project 1!
 
 These relational OLTP DBMS tools are foundational in many organizations, ensuring that transactional data is handled efficiently and reliably, forming the backbone of countless business operations worldwide.
 
-## (Your interest category 1)
 
 ## (Your interest category 2)
 

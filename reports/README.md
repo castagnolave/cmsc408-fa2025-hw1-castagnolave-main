@@ -13,6 +13,6 @@ For homework 1:
 * You'll need to upload *report.html* to Canvas, and
 * You'll need to post this repo to gradescope for autograding.
 
-In this assignment,  the nine categories of data engineering tools, as well as three sub-categories, are described. To view the HTML page from the quarto file, please use the command "quarto render report.qmd" in the terminal. To view the HTML file, please open "report.html" in a web browser.
+In this assignment,  the nine categories of data engineering tools, as well as three sub-categories, are described. The three sub-categories describedTo view the HTML page from the quarto file, please use the command "quarto render report.qmd" in the terminal. To view the HTML file, please open "report.html" in a web browser.
 
 Yes , I have completed the assignment as per the instructions provided to the best of my ability. 
