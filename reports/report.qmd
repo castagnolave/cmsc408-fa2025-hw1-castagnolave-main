@@ -85,26 +85,26 @@ In the following sections I identify three subcategories of data engineering too
 
 Event Hubs is a data ingestion service by Microsoft Azure. It is designed to be low-latency and has the ability to process millions of events per second, from several sources. 
 
-### Characteristics of Event Hubs
 
+### Characteristics of Event Hubs
 1. **Stream Analytics:**
    - Data is processed in real time. Event Hubs takes in raw streaming data and Stream Analytics looks at it and can make a decision in that moment, like send a notification or log the data.
    - Data can be output to Power BI, Azure Data Lake, Blob Storage, or SQL Database. There are many ways to output this data.
-
 2. **Azure Data Lake & Blob Storage:**
    - Stream Analytics is able to work to store results through Blob Storage or Data Lakes. This is useful for long-term storage, or when something needs to be reported at a later date.
    - Blob storage tends to work better for smaller-scale analytics, as it is simple and cheap. It can also be used to archive or backup.
    - Data Lake is good for large-scale data, 
    especially for advanced analytics. It is hierarchal in structure, unlike blob storage, so it is especially good for those larger real-time cases in terms of relation to Azure Stream Analytics.
 
-### Why It's Important
 
+### Why It's Important
 1. **Real-Time Processing**
    - Because ASA processes data in real time, it can be used for critical events like equipment failures and fraud detection.
    - Businesses, governments, and even international organizations can all use this for scenarios like real-world emergencies on any scale.
 2. **Simplicity**
    - There is no need for complex programming languages to use ASA.
    - The queries are akin to SQL, making ASA accessible for more organizations.
+
 
 ### Azure Stream Analytics versus OLTP
    - ASA is built for real-time data analysis, while OLTP is built for real-time business transactions.
@@ -114,56 +114,84 @@ Event Hubs is a data ingestion service by Microsoft Azure. It is designed to be 
    - OLTP is used for things like e-commerce checkout and inventory updates.
    - ASA is used for things like detecting fraud and live dashboards displaying real-time data.
 
+
 ### Why Is It Interesting?
      The author of the article mentions that there is a BYOC (Bring Your Own Cloud) deployment strategy, which isn't something I am used to seeing. I think that this definitely changes how I am used to thinking about things like google drive and iCloud, where those are stored on their cloud, but this is a totally different ballgame.
 
+
 ## MPP Query Engines
 
-M
+Massively Parallel Processing Query Engines are capable of running large queries by splitting them up into smaller tasks. These smaller tasks are then run in parallel across many machines and then the results are combines to get a quick answer.
 
-### Characteristics of Event Hubs
 
-1. **Stream Analytics:**
-   - 
+### Characteristics of MPP Query Engines
+1. **Speed**
+   MPP allows for even large queries to gather results quickly.
+2. **Scale**
+   MPP can handle very large sets of data.
+3. **Parallelism**
+   MPP uses multiple processors/devices at once to get its results.
+4. **Workload Suitability**
+   MPP are not generally designed for small workloads, and can be very expensive.
 
-2. **Azure Data Lake & Blob Storage:**
-   - 
-
-### Why It's Important
-
-### Azure Stream Analytics versus OLTP
-
-### Why Is It Interesting?
-
-## subject3
-
-summary 
-
-### Characteristics of Event Hubs
-
-1. **Stream Analytics:**
-   - 
-
-2. **Azure Data Lake & Blob Storage:**
-   - 
 
 ### Why It's Important
+   - MPP are able to scale quickly as the need to handle more and more data increases.
+   - They can analyze extremely large amounts of data very quickly.
+   - They work quickly and are compatible with many other data engineering tools.
 
-### Azure Stream Analytics versus OLTP
+
+### MPP versus OLTP
+1. **Scale**
+   - MPP handle terabytes to petabytes of info at a time!
+   - OLTP handle very small transactions, but they are much more frequent.
+2. **Concurrency**
+   - MPP has few users, but the queries are much meatier and heavier in substance. 
+   - OLTP has many users, and supports fast read/writes.
+
 
 ### Why Is It Interesting?
+   The author of the article states that there have not been many changes to this aspect of data engineering technology in the past year. Despite this, I found MPP very interesting because of their extremely large caliber. One cannot even fathom the amount of data in a petabyte, and MPP work on that scale every day.
+
+
+## Python Processing Frameworks
+
+   Python Processing Frameworks are libraries/tools that help users process large amounts of data, run data workflows, and handle data streaming in real time. They can also help with scaling processing to several machines.
+
+
+### Examples of Python Processing Frameworks
+
+1. **Apache Spark**
+   - Apache Spark is a distributed big data engine.
+   - It is generally best for large batch processing or streaming processing. 
+   - It is often used in machine learning.
+
+2. **Celery**
+   - Celery is a distributed task queue which is good for task execution that is asynchronous.
+   - It is good for background things as opposed to analytics.
+   - It is used for things like sending emails.
+
+### Why It's Important
+PPFs allow people to use data tools at small, medium, and large scales. A solo web developer would not have the need for something like Amazon Athena, or a PPF like Apache Spark, but they may find great use in Celery.
+
+
+### PPF versus OLTP
+   - PPF are more of a transformation and analytical set of tools. They can be used for many different scalable things, depending on the type.
+   - OLTP are much more traditional, and are better for real-time transactions like payments or a username update.
+
+### Why Is It Interesting?
+   I found the idea of PPFs interesting because there are so many different ones. I only added a few but I read about several more, and the possibilities seem almost endless. Additionally, the names of some of them that I skimmed over were so silly to me that I just had to learn more about what they were.
+
 
 # Reflection
 
-Convert these questions into brief paragraph responses (two or three sentence).
+* I really liked being able to pick my own sub-sections of data engineering tools to learn more about. It definitely made me curious to learn about the others that I did not research as much, especially since the field is always changing.
 
-* what did you like about this project?
+* The project, as described, was very meaty. It made it difficult and overwhelming to start, but once I had laid more of a skeleton out than was already given (thank you!), I had no problem.
 
-* what did you find hardest about this project?
+* I did not know how long it was going to take me. Despite the warnings, I thought it would not take me that long to complete this project. Additionally, I actually had fun for the first time in a while researching without just making AI assist me with writing.
 
-* what did you find most surprising about this assignment?
-
-* how would you approach this project differently next time?
+* Next time, I would definitely start way sooner so I do not turn it in late again. Additionally, I would probably add more versions as my setup was a bit shaky initially so my version control is a little off.
 
 
 # README
