@@ -2189,14 +2189,27 @@ vertical-align: -.125em;
   </ul></li>
   <li><a href="#digging-into-the-details" id="toc-digging-into-the-details" class="nav-link" data-scroll-target="#digging-into-the-details">Digging into the details</a>
   <ul class="collapse">
-  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section"></a>
+  <li><a href="#event-hubs" id="toc-event-hubs" class="nav-link" data-scroll-target="#event-hubs">Event Hubs</a>
   <ul class="collapse">
-  <li><a href="#unique-characteristics-of-relational-oltp-dbms" id="toc-unique-characteristics-of-relational-oltp-dbms" class="nav-link" data-scroll-target="#unique-characteristics-of-relational-oltp-dbms">Unique Characteristics of Relational OLTP DBMS:</a></li>
-  <li><a href="#usage-of-relational-oltp-dbms" id="toc-usage-of-relational-oltp-dbms" class="nav-link" data-scroll-target="#usage-of-relational-oltp-dbms">Usage of Relational OLTP DBMS:</a></li>
-  <li><a href="#examples-of-open-source-relational-oltp-dbms" id="toc-examples-of-open-source-relational-oltp-dbms" class="nav-link" data-scroll-target="#examples-of-open-source-relational-oltp-dbms">Examples of Open-Source Relational OLTP DBMS:</a></li>
+  <li><a href="#characteristics-of-event-hubs" id="toc-characteristics-of-event-hubs" class="nav-link" data-scroll-target="#characteristics-of-event-hubs">Characteristics of Event Hubs</a></li>
+  <li><a href="#why-its-important" id="toc-why-its-important" class="nav-link" data-scroll-target="#why-its-important">Why It’s Important</a></li>
+  <li><a href="#azure-stream-analytics-versus-oltp" id="toc-azure-stream-analytics-versus-oltp" class="nav-link" data-scroll-target="#azure-stream-analytics-versus-oltp">Azure Stream Analytics versus OLTP</a></li>
+  <li><a href="#why-is-it-interesting" id="toc-why-is-it-interesting" class="nav-link" data-scroll-target="#why-is-it-interesting">Why Is It Interesting?</a></li>
   </ul></li>
-  <li><a href="#your-interest-category-2" id="toc-your-interest-category-2" class="nav-link" data-scroll-target="#your-interest-category-2">(Your interest category 2)</a></li>
-  <li><a href="#your-interest-category-3" id="toc-your-interest-category-3" class="nav-link" data-scroll-target="#your-interest-category-3">(Your interest category 3)</a></li>
+  <li><a href="#mpp-query-engines" id="toc-mpp-query-engines" class="nav-link" data-scroll-target="#mpp-query-engines">MPP Query Engines</a>
+  <ul class="collapse">
+  <li><a href="#characteristics-of-mpp-query-engines" id="toc-characteristics-of-mpp-query-engines" class="nav-link" data-scroll-target="#characteristics-of-mpp-query-engines">Characteristics of MPP Query Engines</a></li>
+  <li><a href="#why-its-important-1" id="toc-why-its-important-1" class="nav-link" data-scroll-target="#why-its-important-1">Why It’s Important</a></li>
+  <li><a href="#mpp-versus-oltp" id="toc-mpp-versus-oltp" class="nav-link" data-scroll-target="#mpp-versus-oltp">MPP versus OLTP</a></li>
+  <li><a href="#why-is-it-interesting-1" id="toc-why-is-it-interesting-1" class="nav-link" data-scroll-target="#why-is-it-interesting-1">Why Is It Interesting?</a></li>
+  </ul></li>
+  <li><a href="#python-processing-frameworks" id="toc-python-processing-frameworks" class="nav-link" data-scroll-target="#python-processing-frameworks">Python Processing Frameworks</a>
+  <ul class="collapse">
+  <li><a href="#examples-of-python-processing-frameworks" id="toc-examples-of-python-processing-frameworks" class="nav-link" data-scroll-target="#examples-of-python-processing-frameworks">Examples of Python Processing Frameworks</a></li>
+  <li><a href="#why-its-important-2" id="toc-why-its-important-2" class="nav-link" data-scroll-target="#why-its-important-2">Why It’s Important</a></li>
+  <li><a href="#ppf-versus-oltp" id="toc-ppf-versus-oltp" class="nav-link" data-scroll-target="#ppf-versus-oltp">PPF versus OLTP</a></li>
+  <li><a href="#why-is-it-interesting-2" id="toc-why-is-it-interesting-2" class="nav-link" data-scroll-target="#why-is-it-interesting-2">Why Is It Interesting?</a></li>
+  </ul></li>
   </ul></li>
   <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection">Reflection</a></li>
   <li><a href="#readme" id="toc-readme" class="nav-link" data-scroll-target="#readme">README</a></li>
@@ -2238,7 +2251,7 @@ vertical-align: -.125em;
 
 
 <p><a href="https://github.com/cmsc-vcu/cmsc408-fa2025-hw1-castagnolave">Link to project repository</a></p>
-<p>(Add an intro paragraph here. What is the purpose of this report?)</p>
+<p>This report summarizes the main categories of data engineering tool. Additionally, it goes further into depth on why each is important, what it does, and how it is different from OLTP. There are some subcategories that have been picked out due to my (the author’s) interest in them, with further descriptions following. At the end, there is a reflection of the assignment and the process of writing this very report.</p>
 <section id="open-source-data-engineering-tools" class="level1">
 <h1>Open Source Data Engineering Tools</h1>
 <p>Author Alireza Sadeghi offers a nice overview of the <a href="https://www.pracdata.io/p/open-source-data-engineering-landscape-2025">2025 data engineering landscape</a> in the on-line web site <a href="https://practicaldataengineering.substack.com/">Practical Data Engineering Substack</a>.</p>
@@ -2288,82 +2301,140 @@ vertical-align: -.125em;
 <section id="digging-into-the-details" class="level1">
 <h1>Digging into the details</h1>
 <p>In the following sections I identify three subcategories of data engineering tools of greatest interest to me.</p>
-<section id="section" class="level2">
-<h2 class="anchored" data-anchor-id="section"></h2>
-<p>This section is provided as an example. DELETE this ENTIRE <em>Relational OLTP DBMS block!</em>, all the way down to the <em>Your interest category 1</em>. You MAY NOT submit <em>relational OLTP DBMS</em> as part of your project 1!</p>
-<p><strong>Relational Online Transaction Processing (OLTP) Database Management Systems (DBMS)</strong> are designed to manage and execute a large number of short, transactional operations that involve the insertion, update, and deletion of data in a relational database. These systems are optimized for environments where data integrity, consistency, and speed are critical due to the high volume of concurrent transactions.</p>
-<section id="unique-characteristics-of-relational-oltp-dbms" class="level3">
-<h3 class="anchored" data-anchor-id="unique-characteristics-of-relational-oltp-dbms">Unique Characteristics of Relational OLTP DBMS:</h3>
+<section id="event-hubs" class="level2">
+<h2 class="anchored" data-anchor-id="event-hubs">Event Hubs</h2>
+<p>Event Hubs is a data ingestion service by Microsoft Azure. It is designed to be low-latency and has the ability to process millions of events per second, from several sources.</p>
+<section id="characteristics-of-event-hubs" class="level3">
+<h3 class="anchored" data-anchor-id="characteristics-of-event-hubs">Characteristics of Event Hubs</h3>
 <ol type="1">
-<li><strong>Structured Data Storage:</strong>
+<li><strong>Stream Analytics:</strong>
 <ul>
-<li>Data is stored in a structured format using tables that define specific schemas, with rows representing records and columns representing attributes of the data.</li>
-<li>The use of primary and foreign keys enforces relationships between different tables, maintaining data integrity across the database.</li>
+<li>Data is processed in real time. Event Hubs takes in raw streaming data and Stream Analytics looks at it and can make a decision in that moment, like send a notification or log the data.</li>
+<li>Data can be output to Power BI, Azure Data Lake, Blob Storage, or SQL Database. There are many ways to output this data.</li>
 </ul></li>
-<li><strong>ACID Compliance:</strong>
+<li><strong>Azure Data Lake &amp; Blob Storage:</strong>
 <ul>
-<li>OLTP systems are designed to be ACID-compliant (Atomicity, Consistency, Isolation, Durability). This ensures that all transactions are processed reliably, even in the event of a system failure.</li>
-<li>Atomicity guarantees that all parts of a transaction are completed; otherwise, the transaction is aborted.</li>
-<li>Consistency ensures that each transaction brings the database from one valid state to another.</li>
-<li>Isolation keeps transactions separated until they are completed, preventing concurrency issues.</li>
-<li>Durability ensures that once a transaction is committed, it is permanently recorded in the database, even in the case of a power failure.</li>
-</ul></li>
-<li><strong>Concurrency Control:</strong>
-<ul>
-<li>OLTP systems employ sophisticated concurrency control mechanisms, such as locking and transaction isolation levels, to manage simultaneous data access by multiple users or processes.</li>
-<li>These mechanisms prevent conflicts and ensure that transactions are executed in a consistent and reliable manner, even under heavy load.</li>
-</ul></li>
-<li><strong>High Availability and Reliability:</strong>
-<ul>
-<li>OLTP databases are designed for environments that require high availability and reliability. They often include features such as replication, clustering, and failover to ensure continuous operation even during hardware or network failures.</li>
-<li>Backup and recovery mechanisms are also integral to these systems, ensuring that data can be restored to a consistent state in the event of a failure.</li>
-</ul></li>
-<li><strong>Scalability:</strong>
-<ul>
-<li>While traditionally OLTP systems were scaled vertically by adding more resources to a single server, modern OLTP DBMS solutions support horizontal scaling, enabling distributed transactions across multiple servers or nodes.</li>
-<li>Distributed OLTP systems can handle a larger number of transactions by partitioning data and processing load across multiple instances.</li>
+<li>Stream Analytics is able to work to store results through Blob Storage or Data Lakes. This is useful for long-term storage, or when something needs to be reported at a later date.</li>
+<li>Blob storage tends to work better for smaller-scale analytics, as it is simple and cheap. It can also be used to archive or backup.</li>
+<li>Data Lake is good for large-scale data, especially for advanced analytics. It is hierarchal in structure, unlike blob storage, so it is especially good for those larger real-time cases in terms of relation to Azure Stream Analytics.</li>
 </ul></li>
 </ol>
 </section>
-<section id="usage-of-relational-oltp-dbms" class="level3">
-<h3 class="anchored" data-anchor-id="usage-of-relational-oltp-dbms">Usage of Relational OLTP DBMS:</h3>
+<section id="why-its-important" class="level3">
+<h3 class="anchored" data-anchor-id="why-its-important">Why It’s Important</h3>
 <ol type="1">
-<li><p><strong>Business Applications:</strong></p>
-<p>OLTP systems are widely used in business applications that require the processing of large volumes of simple, repetitive transactions, such as order processing, inventory management, financial transactions, and customer relationship management (CRM) systems.</p>
-<p>Examples include e-commerce platforms, banking systems, and ERP (Enterprise Resource Planning) software.</p></li>
-<li><p><strong>Real-Time Transaction Processing:</strong></p>
-<p>OLTP systems are ideal for applications requiring real-time data entry, updates, and querying, where the accuracy and speed of transactions directly impact business operations.</p>
-<p>They are often used in industries such as finance, telecommunications, retail, and healthcare, where real-time data processing is critical.</p></li>
-<li><p><strong>Data Integrity and Consistency:</strong></p>
-<p>OLTP databases are crucial in environments where data integrity and consistency are non-negotiable. For example, in financial systems, it is vital that all transactions are recorded accurately and that balances reflect all processed transactions immediately.</p></li>
-<li><p><strong>User-Driven Querying:</strong></p>
-<p>OLTP systems support user-driven querying, allowing end-users to retrieve and interact with data through applications in real-time. These queries are typically simple and involve accessing specific records or performing updates on existing data.</p></li>
+<li><strong>Real-Time Processing</strong>
+<ul>
+<li>Because ASA processes data in real time, it can be used for critical events like equipment failures and fraud detection.</li>
+<li>Businesses, governments, and even international organizations can all use this for scenarios like real-world emergencies on any scale.</li>
+</ul></li>
+<li><strong>Simplicity</strong>
+<ul>
+<li>There is no need for complex programming languages to use ASA.</li>
+<li>The queries are akin to SQL, making ASA accessible for more organizations.</li>
+</ul></li>
 </ol>
 </section>
-<section id="examples-of-open-source-relational-oltp-dbms" class="level3">
-<h3 class="anchored" data-anchor-id="examples-of-open-source-relational-oltp-dbms">Examples of Open-Source Relational OLTP DBMS:</h3>
-<p><strong>PostgreSQL:</strong> A powerful, open-source relational database system that is known for its robustness, extensibility, and support for complex queries and transactions.</p>
-<p><strong>MySQL:</strong> A widely-used open-source relational database known for its ease of use, reliability, and performance, particularly in web-based applications.</p>
-<p><strong>MariaDB:</strong> A fork of MySQL, MariaDB is designed to be highly compatible with MySQL while offering additional features and performance improvements.</p>
-<p><strong>SQLite:</strong> A lightweight, embedded SQL database engine that is self-contained and requires minimal setup, commonly used in mobile apps and small to medium-sized applications.</p>
-<p>These relational OLTP DBMS tools are foundational in many organizations, ensuring that transactional data is handled efficiently and reliably, forming the backbone of countless business operations worldwide.</p>
+<section id="azure-stream-analytics-versus-oltp" class="level3">
+<h3 class="anchored" data-anchor-id="azure-stream-analytics-versus-oltp">Azure Stream Analytics versus OLTP</h3>
+<ul>
+<li>ASA is built for real-time data analysis, while OLTP is built for real-time business transactions.</li>
+<li>Generally, OLTP is a little faster, as ASA is often handling larger queries in real time.</li>
+<li>ASA is not designed to have many users on the system, while OLTP is built with that in mind.</li>
+<li>ASA does not store anything directly, or change it, but OLTP often will, as it is built to update, store, delete, and even add data.</li>
+<li>OLTP is used for things like e-commerce checkout and inventory updates.</li>
+<li>ASA is used for things like detecting fraud and live dashboards displaying real-time data.</li>
+</ul>
+</section>
+<section id="why-is-it-interesting" class="level3">
+<h3 class="anchored" data-anchor-id="why-is-it-interesting">Why Is It Interesting?</h3>
+<pre><code> The author of the article mentions that there is a BYOC (Bring Your Own Cloud) deployment strategy, which isn&#39;t something I am used to seeing. I think that this definitely changes how I am used to thinking about things like google drive and iCloud, where those are stored on their cloud, but this is a totally different ballgame.</code></pre>
 </section>
 </section>
-<section id="your-interest-category-2" class="level2">
-<h2 class="anchored" data-anchor-id="your-interest-category-2">(Your interest category 2)</h2>
+<section id="mpp-query-engines" class="level2">
+<h2 class="anchored" data-anchor-id="mpp-query-engines">MPP Query Engines</h2>
+<p>Massively Parallel Processing Query Engines are capable of running large queries by splitting them up into smaller tasks. These smaller tasks are then run in parallel across many machines and then the results are combines to get a quick answer.</p>
+<section id="characteristics-of-mpp-query-engines" class="level3">
+<h3 class="anchored" data-anchor-id="characteristics-of-mpp-query-engines">Characteristics of MPP Query Engines</h3>
+<ol type="1">
+<li><strong>Speed</strong> MPP allows for even large queries to gather results quickly.</li>
+<li><strong>Scale</strong> MPP can handle very large sets of data.</li>
+<li><strong>Parallelism</strong> MPP uses multiple processors/devices at once to get its results.</li>
+<li><strong>Workload Suitability</strong> MPP are not generally designed for small workloads, and can be very expensive.</li>
+</ol>
 </section>
-<section id="your-interest-category-3" class="level2">
-<h2 class="anchored" data-anchor-id="your-interest-category-3">(Your interest category 3)</h2>
+<section id="why-its-important-1" class="level3">
+<h3 class="anchored" data-anchor-id="why-its-important-1">Why It’s Important</h3>
+<ul>
+<li>MPP are able to scale quickly as the need to handle more and more data increases.</li>
+<li>They can analyze extremely large amounts of data very quickly.</li>
+<li>They work quickly and are compatible with many other data engineering tools.</li>
+</ul>
+</section>
+<section id="mpp-versus-oltp" class="level3">
+<h3 class="anchored" data-anchor-id="mpp-versus-oltp">MPP versus OLTP</h3>
+<ol type="1">
+<li><strong>Scale</strong>
+<ul>
+<li>MPP handle terabytes to petabytes of info at a time!</li>
+<li>OLTP handle very small transactions, but they are much more frequent.</li>
+</ul></li>
+<li><strong>Concurrency</strong>
+<ul>
+<li>MPP has few users, but the queries are much meatier and heavier in substance.</li>
+<li>OLTP has many users, and supports fast read/writes.</li>
+</ul></li>
+</ol>
+</section>
+<section id="why-is-it-interesting-1" class="level3">
+<h3 class="anchored" data-anchor-id="why-is-it-interesting-1">Why Is It Interesting?</h3>
+<p>The author of the article states that there have not been many changes to this aspect of data engineering technology in the past year. Despite this, I found MPP very interesting because of their extremely large caliber. One cannot even fathom the amount of data in a petabyte, and MPP work on that scale every day.</p>
+</section>
+</section>
+<section id="python-processing-frameworks" class="level2">
+<h2 class="anchored" data-anchor-id="python-processing-frameworks">Python Processing Frameworks</h2>
+<p>Python Processing Frameworks are libraries/tools that help users process large amounts of data, run data workflows, and handle data streaming in real time. They can also help with scaling processing to several machines.</p>
+<section id="examples-of-python-processing-frameworks" class="level3">
+<h3 class="anchored" data-anchor-id="examples-of-python-processing-frameworks">Examples of Python Processing Frameworks</h3>
+<ol type="1">
+<li><strong>Apache Spark</strong>
+<ul>
+<li>Apache Spark is a distributed big data engine.</li>
+<li>It is generally best for large batch processing or streaming processing.</li>
+<li>It is often used in machine learning.</li>
+</ul></li>
+<li><strong>Celery</strong>
+<ul>
+<li>Celery is a distributed task queue which is good for task execution that is asynchronous.</li>
+<li>It is good for background things as opposed to analytics.</li>
+<li>It is used for things like sending emails.</li>
+</ul></li>
+</ol>
+</section>
+<section id="why-its-important-2" class="level3">
+<h3 class="anchored" data-anchor-id="why-its-important-2">Why It’s Important</h3>
+<p>PPFs allow people to use data tools at small, medium, and large scales. A solo web developer would not have the need for something like Amazon Athena, or a PPF like Apache Spark, but they may find great use in Celery.</p>
+</section>
+<section id="ppf-versus-oltp" class="level3">
+<h3 class="anchored" data-anchor-id="ppf-versus-oltp">PPF versus OLTP</h3>
+<ul>
+<li>PPF are more of a transformation and analytical set of tools. They can be used for many different scalable things, depending on the type.</li>
+<li>OLTP are much more traditional, and are better for real-time transactions like payments or a username update.</li>
+</ul>
+</section>
+<section id="why-is-it-interesting-2" class="level3">
+<h3 class="anchored" data-anchor-id="why-is-it-interesting-2">Why Is It Interesting?</h3>
+<p>I found the idea of PPFs interesting because there are so many different ones. I only added a few but I read about several more, and the possibilities seem almost endless. Additionally, the names of some of them that I skimmed over were so silly to me that I just had to learn more about what they were.</p>
+</section>
 </section>
 </section>
 <section id="reflection" class="level1">
 <h1>Reflection</h1>
-<p>Convert these questions into brief paragraph responses (two or three sentence).</p>
 <ul>
-<li><p>what did you like about this project?</p></li>
-<li><p>what did you find hardest about this project?</p></li>
-<li><p>what did you find most surprising about this assignment?</p></li>
-<li><p>how would you approach this project differently next time?</p></li>
+<li><p>I really liked being able to pick my own sub-sections of data engineering tools to learn more about. It definitely made me curious to learn about the others that I did not research as much, especially since the field is always changing.</p></li>
+<li><p>The project, as described, was very meaty. It made it difficult and overwhelming to start, but once I had laid more of a skeleton out than was already given (thank you!), I had no problem.</p></li>
+<li><p>I did not know how long it was going to take me. Despite the warnings, I thought it would not take me that long to complete this project. Additionally, I actually had fun for the first time in a while researching without just making AI assist me with writing.</p></li>
+<li><p>Next time, I would definitely start way sooner so I do not turn it in late again. Additionally, I would probably add more versions as my setup was a bit shaky initially so my version control is a little off.</p></li>
 </ul>
 </section>
 <section id="readme" class="level1">
