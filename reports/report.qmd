@@ -4,19 +4,11 @@ author:
     - name: Victoria Castagnola
       email: castagnola.victoria@gmail.com or castagnolave@vcu.edu
 date: 8/31/2025
-
-## Useful references:
-# - Basic Markdown: https://quarto.org/docs/authoring/markdown-basics.html
-# - Quarto figures: https://quarto.org/docs/authoring/figures.html
-# - HTML document basics: https://quarto.org/docs/output-formats/html-basics.html
-# - Quarto guide: https://quarto.org/docs/guide/
-# - VS Code and Quarto: https://quarto.org/docs/tools/vscode.html
-#   (RTFM and GET THE EXTENSION!!!!)
 ---
 
 [Link to project repository](https://github.com/cmsc-vcu/cmsc408-fa2025-hw1-castagnolave)
 
-(Add an intro paragraph here.  What is the purpose of this report?)
+This report summarizes the main categories of data engineering tool. Additionally, it goes further into depth on why each is important, what it does, and how it is different from OLTP. There are some subcategories that have been picked out due to my (the author's) interest in them, with further descriptions following. At the end, there is a reflection of the assignment and the process of writing this very report.
 
 # Open Source Data Engineering Tools
 
@@ -123,11 +115,11 @@ Event Hubs is a data ingestion service by Microsoft Azure. It is designed to be 
    - ASA is used for things like detecting fraud and live dashboards displaying real-time data.
 
 ### Why Is It Interesting?
+     The author of the article mentions that there is a BYOC (Bring Your Own Cloud) deployment strategy, which isn't something I am used to seeing. I think that this definitely changes how I am used to thinking about things like google drive and iCloud, where those are stored on their cloud, but this is a totally different ballgame.
 
+## MPP Query Engines
 
-## subject2
-
-summary 
+M
 
 ### Characteristics of Event Hubs
 
